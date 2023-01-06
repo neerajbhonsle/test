@@ -1,0 +1,121 @@
+1)
+package com.xworkz.example;
+
+import java.util.Arrays;
+
+public class MaxAndMin {
+	static int max;
+	static int min;
+
+	public static void max_min(int my_array[]) {
+		max = my_array[0];
+		min = my_array[0];
+		int len = my_array.length;
+		for (int i = 1; i < len - 1; i = i + 2) {
+			if (i + 1 > len) {
+				if (my_array[i] > max)
+					max = my_array[i];
+				if (my_array[i] < min)
+					min = my_array[i];
+			}
+			if (my_array[i] > my_array[i + 1]) {
+				if (my_array[i] > max)
+					max = my_array[i];
+				if (my_array[i + 1] < min)
+					min = my_array[i + 1];
+			}
+			if (my_array[i] < my_array[i + 1]) {
+				if (my_array[i] < min)
+					min = my_array[i];
+				if (my_array[i + 1] > max)
+					max = my_array[i + 1];
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+		int[] my_array = { 45, 333, 76, 29, 900, 23, 474, 654, 29, 454 };
+		max_min(my_array);
+		System.out.println(" Original Array: " + Arrays.toString(my_array));
+		System.out.println(" Maximum value for the above array = " + max);
+		System.out.println(" Minimum value for the above array = " + min);
+	}
+
+}
+2)
+package com.xworkz.example;
+
+import java.util.Scanner;
+
+public class Love {
+	public static boolean flowersPetals(int flower1Petals, int flower2Petals) {
+		return false;
+
+	}
+
+	public static void main(String[] args) {
+		Scanner flower1 = new Scanner(System.in);
+        Scanner flower2 = new Scanner(System.in);
+
+        System.out.print("Enter a number of petals: ");
+        int num1 = flower1.nextInt();
+        int num2 = flower2.nextInt();
+        flowersPetals(num1,num2);
+        
+        if(num1%2==0 && num2%2==0) {
+        	System.out.println("They are not in love");
+        }else {
+        	System.out.println("They are in love");
+        }
+
+	}
+
+}
+3)whatare the generalized and specialized class in java?
+
+3Ans:-Specialization and generalization is the subclass and superclass,the concept of inheritance in Java
+
+4)a) i dont want my class to be inherited by any other class what should i do?
+ans:- make the class as final.
+
+4)b) can u give few examples of final class defined in java API?
+ans:-java.lang.String,java.lang.Math are final classes.
+
+4)c)what are some alternative to inheritance?
+ans:- no there is no alternative to inheritance.
+
+5)which sorted collection have u used?
+ans:-list and arraylist
+
+6)what is diff bw linkedlist and arraylistin java?
+Arraylist:-
+dynamic array.
+Manipulation with ArrayList is slow.
+ArrayList is better for storing and accessing data.
+The memory location for the elements of an ArrayList is contiguous.
+
+linkedlist:-
+doubly linked list.
+Manipulation with LinkedList is faster.
+inkedList is better for manipulating data.
+The location for the elements of a linked list is not contagious.
+
+7)ans:-iterator:-
+The deletion of an element is not allowed in the case of the iterator.
+The addition of an element is not allowed in case of an iterator as it throws.
+Modification of an element is not allowed in case of an iterator as it throws.
+
+listiterator:-
+ListIterator can replace an element in list collection.
+ListIterator can add an element in list collection any time easily.
+ListIterator can modify an element in list collection any time easily by calling set method.
+
+8)ans:-it is used when an object is returned by the overriding method.
+
+9)ans:-Java memory leakage is when objects are no longer being used a garbage collector is used with removing objects that are no longer being referenced by the application.
+
+10)ans:-Polymorphism is the ability of an object to take on many forms.
+compile time:- method overloading in the same class where parameters are different is an example of static polymorphism as the compiler.
+Runtime:-when a parent class reference is used to refer to a child class object. Method overriding by a subclass is termed as runtime polymorphism.
+
+11)ans:-if she want to give security for the properties she can use encapsulation and make the propertiesas private and provide setter and getter methods.
